@@ -1,15 +1,16 @@
 import pandas as pd
-import pandas_profiling
+import numpy as np
 import streamlit as st
 import seaborn as sns
 import matplotlib.pyplot as plt
 import io
+import pandas_profiling
 import plotly.express as px
-import numpy as np
+
 
 from streamlit_pandas_profiling import st_profile_report
 
-dir = "D://Projects Machine Learning//Forecasting//NN forecasting//Trials//"
+dir = ""
 df = pd.read_csv(dir + "subset.csv")
 df['date_time'] = pd.to_datetime(df['date_time'])
 columns = ["NO2", "CO", "O3", "PM10", "PM2.5"]
